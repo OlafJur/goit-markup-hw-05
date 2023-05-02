@@ -94,6 +94,15 @@ ul {
     line-height: 1.14;
     letter-spacing: 0.02em;
 }
+.header-menu-item:hover::after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 100%;
+    margin: 0 0 32 0;
+    border-radius: 2px;
+    background-color: var(--primary-color);
+}
 .header-contacts-item {
     display: inline-flex;
     justify-content: center;
@@ -480,3 +489,39 @@ h2 {
     color: var(--scnd-font-color);
 }
 /* PORTFOLIO */
+
+/* MODAL */
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+.backdrop {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.modal {
+    position: absolute;
+    min-height: 581px;
+    width: 528px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 1);
+}
+.close-btn {
+    box-sizing: border-box;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+/* MODAL */
