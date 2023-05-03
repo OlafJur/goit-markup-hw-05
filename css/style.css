@@ -94,14 +94,28 @@ ul {
     line-height: 1.14;
     letter-spacing: 0.02em;
 }
-.header-menu-item:hover::after {
+.header-menu-item :hover::after {
     content: '';
-    display: block;
-    height: 4px;
+    align-items: center;
+    display: inline-block;
+    border-radius: 4px;
     width: 100%;
-    margin: 0 0 32 0;
-    border-radius: 2px;
-    background-color: var(--primary-color);
+    margin-top: 45px;
+    position: absolute;
+    left: 0%;
+    border-bottom: solid 4px #2196f3;
+}
+.header-underline::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    left: 0;
+    margin-top: 47px;
+    position: absolute;
+    border-bottom: solid 4px #2196f3;
+}
+.header-underline {
+    position: relative;
 }
 .header-contacts-item {
     display: inline-flex;
@@ -464,6 +478,70 @@ h2 {
     display: flex;
     flex-direction: column;
     border: 1px solid var(--filter-border);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    z-index: 0;
+}
+.project-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-overlay {
+    position: relative;
+    width: 370px;
+    height: 294px;
+    overflow: hidden;
+}
+.card-animation {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.9);
+    -webkit-transform: translateY(200%);
+    transform: translateY(200%);
+    -webkit-transition: -webkit-transform 500ms ease;
+    transition: -webkit-transform 500ms ease;
+    transition: transform 500ms ease;
+    transition: transform 500ms ease, -webkit-transform 500ms ease;
+}
+.project-item:hover .card-animation {
+    -webkit-transition-duration: 250ms;
+    transition-duration: 250ms;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transform: translatex(0);
+    transform: translatex(0);
+}
+.card-animation:is(:hover) {
+    -webkit-transition-duration: 250ms;
+    transition-duration: 250ms;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transform: translatex(0);
+    transform: translatex(0);
+}
+.card-description {
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    color: var(--white-text);
+    padding-top: 49px;
+    padding-left: 24px;
+    padding-right: 45px;
+    z-index: 1;
 }
 .project-item:is(:hover, :focus) {
     cursor: pointer;
@@ -488,6 +566,7 @@ h2 {
     line-height: 1.88;
     color: var(--scnd-font-color);
 }
+
 /* PORTFOLIO */
 
 /* MODAL */
@@ -510,7 +589,7 @@ h2 {
     width: 528px;
     left: 50%;
     right: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
     border-radius: 4px;
     background: rgba(255, 255, 255, 1);
 }
