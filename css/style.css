@@ -506,9 +506,8 @@ h2 {
     position: absolute;
     top: 0;
     left: 0;
-    color: #fff;
     height: 100%;
-    background-color: rgba(33, 150, 243, 0.9);
+    background-color: var(--primary-color);
     -webkit-transform: translateY(200%);
     transform: translateY(200%);
     -webkit-transition: -webkit-transform 500ms ease;
@@ -534,13 +533,10 @@ h2 {
 }
 .card-description {
     font-size: 18px;
-    color: #fff;
+    color: white;
     line-height: 1.55;
     letter-spacing: 0.03em;
-    color: var(--white-text);
-    padding-top: 49px;
-    padding-left: 24px;
-    padding-right: 45px;
+    padding: 49px 45px 0 24px;
     z-index: 1;
 }
 .project-item:is(:hover, :focus) {
@@ -576,31 +572,29 @@ h2 {
     pointer-events: none;
 }
 .backdrop {
+    display: flex;
+    justify-content: center;
     position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background-color: rgba(0, 0, 0, 0.2);
 }
 .modal {
+    display: flex;
     position: absolute;
     min-height: 581px;
     width: 528px;
-    left: 50%;
-    right: 50%;
-    transform: translate(-50%, -50%) scale(1);
+    top: 20%;
     border-radius: 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
     background: rgba(255, 255, 255, 1);
 }
-.close-btn {
-    box-sizing: border-box;
+.icon-close-btn {
     position: absolute;
     top: 8px;
     right: 8px;
     width: 30px;
     height: 30px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
 /* MODAL */
