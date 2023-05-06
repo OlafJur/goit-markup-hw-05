@@ -22,11 +22,7 @@ body {
 ul {
     list-style: none;
 }
-a:is(:hover, :focus),
-button:is(:hover, :focus) {
-    transition: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+
 /* UTILS */
 
 .section {
@@ -89,6 +85,9 @@ button:is(:hover, :focus) {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+
+    transition: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-menu-item :hover::after {
     content: '';
@@ -134,6 +133,8 @@ button:is(:hover, :focus) {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
+    transition: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-contact {
     display: flex;
@@ -326,6 +327,8 @@ h2 {
     height: 44px;
     border-radius: 22px;
     border-style: none;
+    transition: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-sm-icon {
     fill: var(--scnd-font-color);
@@ -365,6 +368,9 @@ h2 {
     display: inline-flex;
     width: 106px;
     height: 60px;
+
+    transition: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client:is(:hover, :focus) > .client-item {
     fill: var(--primary-color);
@@ -434,6 +440,9 @@ h2 {
     height: 44px;
     border-radius: 22px;
     background: rgba(255, 255, 255, 0.1);
+
+    transition: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .join-us-icon {
     fill: white;
@@ -467,6 +476,9 @@ h2 {
     border-style: none;
     border-radius: 4px;
     background-color: var(--scnd-background);
+
+    transition: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter-button:is(:hover, :focus) {
     cursor: pointer;
@@ -496,6 +508,8 @@ h2 {
     overflow: hidden;
     margin: 0 auto;
     z-index: 0;
+    transition: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .project-card {
     position: relative;
@@ -548,9 +562,8 @@ h2 {
 }
 .project-item:is(:hover, :focus) {
     cursor: pointer;
-    box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.06);
-    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+        0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
 .project-subtitles {
     padding: 20px 24px;
